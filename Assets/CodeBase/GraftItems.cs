@@ -7,8 +7,8 @@ public class GraftItems : MonoBehaviour
     #region Veriables
 
     [SerializeField] private Rigidbody2D[] _prefabItems;
-    private float screen = Screen.width / 54f/2f;
-    
+    private float screen = Screen.width / 54f / 2f;
+
     #endregion
 
     #region Unity lifecycle
@@ -20,7 +20,6 @@ public class GraftItems : MonoBehaviour
         IEnumerator gravityUp = gravityScaleUp();
         StartCoroutine(craftItems);
         StartCoroutine(gravityUp);
-        Debug.Log(screen);
     }
 
     #endregion
@@ -46,7 +45,6 @@ public class GraftItems : MonoBehaviour
         }
     }
 
-    
 
     private void CreateItems()
     {
@@ -91,5 +89,6 @@ public class GraftItems : MonoBehaviour
             rigidbody2D.gravityScale = 1f;
         }
     }
+
     #endregion
 }
